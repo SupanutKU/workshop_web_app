@@ -23,7 +23,8 @@ var  todos = new List<TodoGetDto>
     new(3, "Build a web API", false)
 };
 
-app.MapGet("/api/todos", () => Results.Ok(todos));
+app.MapGet("/api/todos", () =>
+Results.Ok(todos));
 
 app.MapGet("/api/todos/{id}", (int id) =>
 {
